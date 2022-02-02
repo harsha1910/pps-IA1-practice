@@ -16,35 +16,36 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x804: file p1final.c, line 23.
+Breakpoint 1 at 0x7fc: file p1final.c, line 16.
 (gdb) r
-Starting program: /home/runner/pps-IA1-practice-2/a.out 
+Starting program: /home/runner/pps-IA1-practice-3/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p1final.c:23
-23    a=input();
+Breakpoint 1, main () at p1final.c:16
+16  {
 (gdb) n
- Enter value
+18    input(&a,&b);
+(gdb) n
+enter two values of a,b
 1
-24    b=input();
-(gdb) n
- Enter value
 2
-25    sum=add(a,b);
+19    add(a,b,&sum);
 (gdb) n
-26    output(sum);
+20    output(a,b,sum);
 (gdb) n
-27    return 0;
+21    return 0;
 (gdb) s
-29  }(gdb) p
+22  }
+(gdb) p
 The history is empty.
 (gdb) c
 Continuing.
-Sum is 3[Inferior 1 (process 380) exited normally]
+sum of a and b is 1+2=3[Inferior 1 (process 179) exited normally]
 (gdb) l
-24    b=input();
-25    sum=add(a,b);
-26    output(sum);
-27    return 0;
-28
-29  }(gdb) 
+17    int a,b,sum;
+18    input(&a,&b);
+19    add(a,b,&sum);
+20    output(a,b,sum);
+21    return 0;
+22  }
+(gdb) 
