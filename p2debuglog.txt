@@ -1,4 +1,4 @@
- 
+
  gcc -g p2final.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
@@ -19,7 +19,7 @@ Reading symbols from a.out...done.
 (gdb) b main
 Breakpoint 1 at 0x7f0: file p2final.c, line 31.
 (gdb) r
-Starting program: /home/runner/pps-IA1-practice-3/a.out 
+Starting program: /home/runner/pps-IA1-practice-5/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
 Breakpoint 1, main () at p2final.c:31
@@ -44,7 +44,7 @@ among 1,2,3
 The history is empty.
 (gdb) c
 Continuing.
-3 is largest[Inferior 1 (process 534) exited normally]
+3 is largest[Inferior 1 (process 44) exited normally]
 (gdb) l
 32    b=input();
 33    c=input();
@@ -52,4 +52,4 @@ Continuing.
 35    output(a,b,c,s);
 36    return 0;
 37  }
-(gdb) 
+(gdb)
